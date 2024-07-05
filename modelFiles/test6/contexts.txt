@@ -1,0 +1,15 @@
+Context/Optional/Connexion
+Context/Mandatory/Phonecontext
+Context/Mandatory/Useractivity
+Context/Mandatory/Usersettings
+Context/Mandatory/Timeofday
+Connexion/Optional/Wifi
+Connexion/Optional/Network
+Phonecontext/Mandatory/Storage
+Phonecontext/Optional/Camera
+Storage/Alternative/Slow-Savailable-Scritique
+Useractivity/Alternative/Busy-Atwork-Uavailable-Urgent
+Usersettings/Optional/NotificationOn
+Usersettings/Optional/Allowlocalisation
+Timeofday/Optional/Day
+Timeofday/Optional/Night

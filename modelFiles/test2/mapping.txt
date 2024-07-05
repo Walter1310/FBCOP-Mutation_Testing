@@ -1,0 +1,14 @@
+Jeune-ACTIVATES-Statut
+Jeune-ACTIVATES-Lien
+Jeune-ACTIVATES-Parental
+Adulte-ACTIVATES-Statut
+Adulte-ACTIVATES-Photo
+Adulte-ACTIVATES-Lien
+Vieux-ACTIVATES-Photo
+Vieux-ACTIVATES-Vieillesse
+Actif-ACTIVATES-Ligne
+Actif-ACTIVATES-Recherche
+Inactif-ACTIVATES-Deconnecte
+Matin-ACTIVATES-Clair
+Soir-ACTIVATES-Sombre
+EnVoiture-ACTIVATES-Voiture

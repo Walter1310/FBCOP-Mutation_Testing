@@ -1,0 +1,4 @@
+Context/Optional/Activity-Connection-Battery
+Activity/Alternative/Work-Driving-Event-Emergency
+Connection/Alternative/Wifiactivated-NoWifi-Badnetwork
+Battery/Alternative/High-Low

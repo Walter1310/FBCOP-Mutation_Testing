@@ -1,0 +1,10 @@
+Context/Mandatory/Localization
+Context/Mandatory/Time
+Context/Mandatory/CarMode
+Context/Mandatory/Connection
+Time/Mandatory/Date
+Time/Mandatory/Hour
+CarMode/Alternative/On-Off
+Connection/Alternative/Mobile-Wifi
+Date/Alternative/WorkingDay-DayOff
+Hour/Alternative/Night-Day

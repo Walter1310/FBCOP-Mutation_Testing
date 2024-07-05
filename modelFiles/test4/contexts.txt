@@ -1,0 +1,9 @@
+Context/Optional/QuietPlace
+Context/Optional/Night
+Context/Optional/Season
+Context/Optional/LowStorage
+Context/Optional/LowBattery
+Context/Optional/Network
+Context/Optional/Darker
+Context/Optional/Device
+Network/Optional/Bad-4G-Good

@@ -1,0 +1,14 @@
+Feature/Mandatory/Contacts-Messages-Calls-Notifications-Colour
+Contacts/Mandatory/CreateGroups-Add-Remove-Block-Signal
+Messages/Mandatory/Actions-Types
+Calls/Mandatory/Audio
+Calls/Optional/Video
+Notifications/Optional/Mute
+Colour/Or/BlackAndWhite-Theme-LessVibrant
+Actions/Mandatory/Send-Receive-Delete-Modify-Search-React
+Types/Mandatory/Images-Videos-Emoji
+Types/Optional/Vocal-Files-Location
+Mute/Alternative/Everyone-Selection
+Send/Optional/KeyboardLanguage
+Images/Or/HighQuality-LowQuality
+Videos/Mandatory/Sound-Music

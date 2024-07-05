@@ -1,0 +1,8 @@
+testName,nSubmodels,nMutants,nQuestions
+basic_example,7,8,6
+test1,13,36,10
+test2,8,7,5
+test3,16,21,10
+test4,11,0,0
+test5,7,7,5
+test6,16,5,4

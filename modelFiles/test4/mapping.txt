@@ -1,0 +1,10 @@
+QuietPlace-ACTIVATES-Everyone
+Night-ACTIVATES-Selection
+Night-ACTIVATES-BlackAndWhite
+Bad-ACTIVATES-LowQuality
+Good-ACTIVATES-HighQuality,Video
+4G-ACTIVATES-LowQuality
+Season-ACTIVATES-Theme
+LowBattery-ACTIVATES-LessVibrant
+Darker-ACTIVATES-LessVibrant
+LowStorage-ACTIVATES-LowQuality

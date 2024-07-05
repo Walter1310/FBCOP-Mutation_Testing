@@ -1,0 +1,5 @@
+Context/Mandatory/Age-Activite-Horaire
+Context/Optional/Deranger-EnVoiture
+Age/Alternative/Jeune-Adulte-Vieux
+Activite/Alternative/Actif-Inactif
+Horaire/Alternative/Matin-Soir

@@ -1,0 +1,9 @@
+Work,Wifiactivated-ACTIVATES-Donotdisturb
+Driving,Wifiactivated-ACTIVATES-Donotdisturb,Audio
+Event,Wifiactivated,High-ACTIVATES-Localisation,Online
+Emergency,Wifiactivated,High-ACTIVATES-Localisation,Online
+Emergency,Badnetwork-ACTIVATES-Text,Online
+Badnetwork-ACTIVATES-Text,Online
+NoWifi-ACTIVATES-Offline
+Low-ACTIVATES-Offline,Night
+High,Wifiactivated-ACTIVATES-Video,Audio,Text,Img,URL,File,Localisation,Online,Day,System

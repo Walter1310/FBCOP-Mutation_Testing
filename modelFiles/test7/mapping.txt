@@ -1,0 +1,7 @@
+Localization-ACTIVATES-ChoosingServer
+DayOff-ACTIVATES-DoNotDisturbMode
+Night-ACTIVATES-DoNotDisturbMode
+On-ACTIVATES-DoNotDisturbMode
+Off-ACTIVATES-ManageConversation
+Off-ACTIVATES-ManageContacts
+Wifi-ACTIVATES-Files

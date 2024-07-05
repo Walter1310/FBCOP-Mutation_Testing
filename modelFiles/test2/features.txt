@@ -1,0 +1,11 @@
+Feature/Mandatory/Profil-Message-Chat-Appel-Theme-Contacts-Language-Privacy-Notification
+Feature/Optional/Etat-Recherche-Restriction
+Profil/Optional/Statut-Photo
+Message/Or/Text-Image-GIF-Fichier
+Text/Optional/Lien
+Chat/Or/Individuelle-Groupe
+Appel/Or/Video-Vocal
+Etat/Alternative/Ligne-Deconnecte
+Theme/Alternative/Sombre-Clair
+Contacts/Alternative/Ajouter-Supprimer
+Restriction/Alternative/Parental-Vieillesse-Voiture

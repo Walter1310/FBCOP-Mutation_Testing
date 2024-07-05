@@ -1,0 +1,8 @@
+Feature/Mandatory/Message-Contact-Group-Status-Authentication-Theme
+Feature/Optional/Call
+Message/Or/Text-Img-URL-File-Localisation
+Call/Or/Video-Audio
+Status/Alternative/Online-Offline-Donotdisturb
+Theme/Alternative/Night-Day-System
+Online/Mandatory/Notification
+Notification/Or/Sound-Vibration-Popup

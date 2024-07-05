@@ -1,0 +1,115 @@
+================Building Context model================
+================Building Feature model================
+================Building Mapping model================
+=================Generating submodels=================
+16 submodel(s) generated.
+=================Generating mutations=================
+Action -> Optional(1){Driving } 
+{('Driving',): {'TextToSpeech', 'PredefinedMessages'}}
+SendReceive -> Or(3){TextToSpeech PredefinedMessages Messages } 
+
+***************************************
+Action -> Optional(1){Driving } 
+{('Driving',): {'HandfreeInteraction'}}
+Feature -> Optional(1){HandfreeInteraction } 
+
+***************************************
+Context -> Optional(1){PrivacyConcerns } 
+{('PrivacyConcerns',): {'IncognitoMode'}}
+Messaging -> Optional(1){IncognitoMode } 
+
+***************************************
+Contact -> Or(2){ContactHierarchy Managing } 
+{('ContactHierarchy',): {'Personalize'}, ('Managing',): {'Personalize'}}
+Contacts -> Optional(1){Personalize } 
+
+<class 'Mutations.OrToOpt'>->Or(2){ContactHierarchy Managing },Optional(1){Personalize }
+Is it possible for ContactHierarchy and Managing contexts to be activated simultaneously?->['yes', 'y'](Or-To-Opt)
+***************************************
+Contact -> Or(2){ContactHierarchy Managing } 
+{('ContactHierarchy',): {'IncognitoMode'}}
+Messaging -> Optional(1){IncognitoMode } 
+
+<class 'Mutations.OrToOpt'>->Or(2){ContactHierarchy Managing },Optional(1){IncognitoMode }
+Is it possible for ContactHierarchy and Managing contexts to be activated simultaneously?->['yes', 'y'](Or-To-Opt)
+***************************************
+Contact -> Or(2){ContactHierarchy Managing } 
+{('ContactHierarchy',): {'Block'}, ('Managing',): {'Block'}}
+Contacts -> Optional(1){Block } 
+
+<class 'Mutations.OrToOpt'>->Or(2){ContactHierarchy Managing },Optional(1){Block }
+Is it possible for ContactHierarchy and Managing contexts to be activated simultaneously?->['yes', 'y'](Or-To-Opt)
+***************************************
+Meeting -> Or(2){Personal Work } 
+{('Work',): {'Mute'}}
+Messaging -> Optional(1){Mute } 
+
+<class 'Mutations.OrToOpt'>->Or(2){Personal Work },Optional(1){Mute }
+Is it possible for Personal and Work contexts to be activated simultaneously?->['yes', 'y'](Or-To-Opt)
+***************************************
+Meeting -> Or(2){Personal Work } 
+{('Work',): {'PredefinedMessages'}}
+SendReceive -> Or(3){TextToSpeech PredefinedMessages Messages } 
+
+<class 'Mutations.OrToAlt'>->Or(2){Personal Work },Or(3){TextToSpeech PredefinedMessages Messages }
+Is it possible for TextToSpeech, PredefinedMessages and Messages features to be activated simultaneously?->['no', 'n'](Or-To-Alt)
+<class 'Mutations.OrToOpt'>->Or(2){Personal Work },Or(3){TextToSpeech PredefinedMessages Messages }
+Is it possible for Personal, Work contexts and for TextToSpeech, PredefinedMessages, Messages features to be activated simultaneously?->['yes', 'y'](Or-To-Opt)
+***************************************
+Meeting -> Or(2){Personal Work } 
+{('Personal',): {'Geolocation'}}
+Feature -> Optional(1){Geolocation } 
+
+<class 'Mutations.OrToOpt'>->Or(2){Personal Work },Optional(1){Geolocation }
+Is it possible for Personal and Work contexts to be activated simultaneously?->['yes', 'y'](Or-To-Opt)
+***************************************
+Context -> Mandatory(1){NotCall } 
+{('NotCall',): {'Messages'}}
+SendReceive -> Or(3){TextToSpeech PredefinedMessages Messages } 
+
+***************************************
+Context -> Mandatory(1){NotMessage } 
+{('NotMessage',): {'VideoCall', 'VoiceCall'}}
+Call -> Or(2){VideoCall VoiceCall } 
+
+***************************************
+Context -> Mandatory(1){NotMessage } 
+{('NotMessage',): {'Search'}}
+Feature -> Optional(1){Search } 
+
+<class 'Mutations.ManToOpt'>->Mandatory(1){NotMessage },Optional(1){Search }
+Does NotMessage have to be activated in any configuration?->['no', 'n'](Man-To-Opt)
+***************************************
+Modes -> Or(3){Night Offline CSMode } 
+{('CSMode',): {'Mute'}}
+Messaging -> Optional(1){Mute } 
+
+<class 'Mutations.OrToOpt'>->Or(3){Night Offline CSMode },Optional(1){Mute }
+Is it possible for CSMode, Night and Offline contexts to be activated simultaneously?->['yes', 'y'](Or-To-Opt)
+***************************************
+Modes -> Or(3){Night Offline CSMode } 
+{('CSMode',): {'NightMode'}}
+Theme -> Alternative(2){LightMode NightMode } 
+
+<class 'Mutations.OrToAlt'>->Or(3){Night Offline CSMode },Alternative(2){LightMode NightMode }
+Is it possible for CSMode, Night and Offline contexts to be activated simultaneously?->['no', 'n'](Or-To-Alt)
+<class 'Mutations.AltToOr'>->Or(3){Night Offline CSMode },Alternative(2){LightMode NightMode }
+Is it possible for LightMode and NightMode features to be activated simultaneously?->['yes', 'y'](Alt-To-Or)
+***************************************
+Modes -> Or(3){Night Offline CSMode } 
+{('Offline',): {'OfflineMode'}}
+Feature -> Optional(1){OfflineMode } 
+
+<class 'Mutations.OrToOpt'>->Or(3){Night Offline CSMode },Optional(1){OfflineMode }
+Is it possible for CSMode, Night and Offline contexts to be activated simultaneously?->['yes', 'y'](Or-To-Opt)
+***************************************
+Modes -> Or(3){Night Offline CSMode } 
+{('Offline',): {'Notification'}}
+Feature -> Mandatory(1){Notification } 
+
+<class 'Mutations.OrToOpt'>->Or(3){Night Offline CSMode },Mandatory(1){Notification }
+Is it possible for CSMode, Night and Offline contexts to be activated simultaneously?->['yes', 'y'](Or-To-Opt)
+***************************************
+13 mutation(s) generated.
+7 question(s) to ask.
+==================Generated Questions=================

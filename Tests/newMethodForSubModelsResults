@@ -1,0 +1,187 @@
+when putting mand and opt alone : 
+
+================Building Context model================
+================Building Feature model================
+================Building Mapping model================
+=================Generating submodels=================
+UserAvailability -> Alternative(2){Available Busy } 
+Available -> 
+Busy -> 
+	{('Available',): {'FilterAvailable'}}	Feature -> Optional(1){FilterAvailable } 
+FilterAvailable -> 
+
+UserAvailability -> Alternative(2){Available Busy } 
+Available -> 
+Busy -> 
+	{('Available',): {'Alarm'}, ('Busy',): {'Mute'}}	Mode -> Alternative(2){Alarm Mute } 
+Alarm -> 
+Mute -> 
+
+Peripheral -> Alternative(2){HasMicrophone HasCamera } 
+HasCamera -> 
+HasMicrophone -> 
+	{('HasMicrophone',): {'Vocal'}}	MessageType -> Optional(1){Vocal } 
+Vocal -> 
+
+Peripheral -> Alternative(2){HasMicrophone HasCamera } 
+HasCamera -> 
+HasMicrophone -> 
+	{('HasCamera',): {'Picture'}}	MessageType -> Optional(1){Picture } 
+Picture -> 
+
+Context -> Optional(1){HighConnection } 
+HighConnection -> 
+Peripheral -> Alternative(2){HasMicrophone HasCamera } 
+HasCamera -> 
+HasMicrophone -> 
+	{('HasCamera', 'HighConnection'): {'Video'}}	MessageType -> Optional(1){Video } 
+Video -> 
+
+Context -> Mandatory(1){Localization } 
+Localization -> 
+	{('Localization',): {'TranslateMessage'}}	Feature -> Optional(1){TranslateMessage } 
+TranslateMessage -> 
+
+ElectronicDevice -> Alternative(2){Mobile Computer } 
+Mobile -> 
+Computer -> 
+	{('Mobile',): {'Simple'}, ('Computer',): {'Complex'}}	Layout -> Or(2){Simple Complex } 
+Simple -> 
+Complex -> 
+
+7 submodel(s) generated.
+=================Generating mutations=================
+Is it possible for Available and Busy contexts to be activated simultaneously?->['yes', 'y']
+Is it possible for Available,Busy contexts and for Available,Busy features to be activated simultaneously?->['yes', 'y']
+Is it possible for HasCamera and HasMicrophone contexts to be activated simultaneously?->['yes', 'y']
+Is it possible for HasCamera and HasMicrophone contexts to be activated simultaneously?->['yes', 'y']
+Is it possible for HasCamera and HasMicrophone contexts to be activated simultaneously?->['yes', 'y']
+Do  and Localization have to be activated in any configuration?->['no', 'n']
+Is it possible for Simple and Complex features to be activated simultaneously?->['no', 'n']
+Is it possible for Mobile and Computer contexts to be activated simultaneously?->['yes', 'y']
+8 mutation(s) generated.
+==================Generated Questions=================
+Is it possible for Mobile and Computer contexts to be activated simultaneously? Please Answer with one of the following : "yes", "y", "no", "n"
+>>> yes
+Is it possible for Available and Busy contexts to be activated simultaneously? Please Answer with one of the following : "yes", "y", "no", "n"
+>>> yes
+Is it possible for HasCamera and HasMicrophone contexts to be activated simultaneously? Please Answer with one of the following : "yes", "y", "no", "n"
+>>> yes
+Do  and Localization have to be activated in any configuration? Please Answer with one of the following : "yes", "y", "no", "n"
+>>> yes
+Is it possible for Simple and Complex features to be activated simultaneously? Please Answer with one of the following : "yes", "y", "no", "n"
+>>> yes
+Is it possible for Available,Busy contexts and for Available,Busy features to be activated simultaneously? Please Answer with one of the following : "yes", "y", "no", "n"
+>>> yes
+================Generated Recommendation==============
+Try to modify the constraint from the following context(s) : Computer with the following mutation : Alt-To-Or
+Try to modify the constraint from the following context(s) : Busy with the following mutation : Alt-To-Or
+Try to modify the constraint from the following context(s) : HasMicrophone with the following mutation : Alt-To-Or
+Try to modify the constraint from the following context(s) : Busy  and the following feature(s) : Busy with the following mutation : Alt-To-Or
+
+
+when putting mand and opt together with other constraints : 
+
+================Building Context model================
+================Building Feature model================
+================Building Mapping model================
+=================Generating submodels=================
+UserAvailability -> Alternative(2){Available Busy } 
+Available -> 
+Busy -> 
+	{('Available',): {'Alarm'}, ('Busy',): {'Mute'}}	Mode -> Alternative(2){Alarm Mute } 
+Alarm -> 
+Mute -> 
+
+UserAvailability -> Alternative(2){Available Busy } 
+Available -> 
+Busy -> 
+	{('Available',): {'FilterAvailable'}}	Feature -> Mandatory(6){ContactSystem Sending Layout Receiving MessageType Mode } Optional(2){FilterAvailable TranslateMessage } 
+ContactSystem -> 
+Sending -> 
+Layout -> 
+Receiving -> 
+MessageType -> 
+Mode -> 
+FilterAvailable -> 
+TranslateMessage -> 
+
+Peripheral -> Alternative(2){HasCamera HasMicrophone } 
+HasCamera -> 
+HasMicrophone -> 
+	{('HasMicrophone',): {'Vocal'}, ('HasCamera',): {'Picture'}}	MessageType -> Mandatory(1){Text } Optional(3){Vocal Picture Video } 
+Text -> 
+Video -> 
+Picture -> 
+Vocal -> 
+
+Peripheral -> Alternative(2){HasCamera HasMicrophone } 
+HasCamera -> 
+HasMicrophone -> 
+Context -> Mandatory(3){Localization UserAvailability ElectronicDevice } Optional(2){HighConnection Peripheral } 
+Localization -> 
+UserAvailability -> 
+ElectronicDevice -> 
+HighConnection -> 
+Peripheral -> 
+	{('HasCamera', 'HighConnection'): {'Video'}}	MessageType -> Mandatory(1){Text } Optional(3){Vocal Picture Video } 
+Text -> 
+Video -> 
+Picture -> 
+Vocal -> 
+
+Context -> Mandatory(3){Localization UserAvailability ElectronicDevice } Optional(2){HighConnection Peripheral } 
+Localization -> 
+UserAvailability -> 
+ElectronicDevice -> 
+HighConnection -> 
+Peripheral -> 
+	{('Localization',): {'TranslateMessage'}}	Feature -> Mandatory(6){ContactSystem Sending Layout Receiving MessageType Mode } Optional(2){FilterAvailable TranslateMessage } 
+ContactSystem -> 
+Sending -> 
+Layout -> 
+Receiving -> 
+MessageType -> 
+Mode -> 
+FilterAvailable -> 
+TranslateMessage -> 
+
+ElectronicDevice -> Alternative(2){Computer Mobile } 
+Computer -> 
+Mobile -> 
+	{('Mobile',): {'Simple'}, ('Computer',): {'Complex'}}	Layout -> Or(2){Complex Simple } 
+Complex -> 
+Simple -> 
+
+6 submodel(s) generated.
+=================Generating mutations=================
+Is it possible for Available,Busy contexts and for Available,Busy features to be activated simultaneously?->['yes', 'y']
+Is it possible for Available and Busy contexts to be activated simultaneously?->['yes', 'y']
+Is it possible for Available and Busy contexts to be activated simultaneously?->['yes', 'y']
+Is it possible for HasCamera and HasMicrophone contexts to be activated simultaneously?->['yes', 'y']
+Is it possible for HasCamera and HasMicrophone contexts to be activated simultaneously?->['yes', 'y']
+Is it possible for HasCamera and HasMicrophone contexts to be activated simultaneously?->['yes', 'y']
+Is it possible for HasCamera and HasMicrophone contexts to be activated simultaneously?->['yes', 'y']
+Do Localization,UserAvailability and ElectronicDevice have to be activated in any configuration?->['no', 'n']
+Do Localization,UserAvailability and ElectronicDevice have to be activated in any configuration?->['no', 'n']
+Is it possible for Complex and Simple features to be activated simultaneously?->['no', 'n']
+Is it possible for Computer and Mobile contexts to be activated simultaneously?->['yes', 'y']
+11 mutation(s) generated.
+==================Generated Questions=================
+Do Localization,UserAvailability and ElectronicDevice have to be activated in any configuration? Please Answer with one of the following : "yes", "y", "no", "n"
+>>> yes
+Is it possible for HasCamera and HasMicrophone contexts to be activated simultaneously? Please Answer with one of the following : "yes", "y", "no", "n"
+>>> yes
+Is it possible for Available and Busy contexts to be activated simultaneously? Please Answer with one of the following : "yes", "y", "no", "n"
+>>> yes
+Is it possible for Available,Busy contexts and for Available,Busy features to be activated simultaneously? Please Answer with one of the following : "yes", "y", "no", "n"
+>>> yes
+Is it possible for Computer and Mobile contexts to be activated simultaneously? Please Answer with one of the following : "yes", "y", "no", "n"
+>>> yes
+Is it possible for Complex and Simple features to be activated simultaneously? Please Answer with one of the following : "yes", "y", "no", "n"
+>>> yes
+================Generated Recommendation==============
+Try to modify the constraint from the following context(s) : HasMicrophone with the following mutation : Alt-To-Or
+Try to modify the constraint from the following context(s) : Busy with the following mutation : Alt-To-Or
+Try to modify the constraint from the following context(s) : Busy  and the following feature(s) : Busy with the following mutation : Alt-To-Or
+Try to modify the constraint from the following context(s) : Mobile with the following mutation : Alt-To-Or

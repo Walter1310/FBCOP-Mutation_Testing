@@ -1,0 +1,11 @@
+Context/Optional/Action
+Context/Optional/PrivacyConcerns
+Context/Mandatory/NotCall
+Context/Mandatory/NotMessage
+Context/Optional/Modes
+Context/Mandatory/UserRegistration
+Context/Mandatory/Contact
+Action/Optional/Driving-Meeting
+Meeting/Or/Work-Personal
+Modes/Or/CSMode-Night-Offline
+Contact/Or/ContactHierarchy-Managing
